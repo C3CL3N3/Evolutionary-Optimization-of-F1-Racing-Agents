@@ -1,0 +1,31 @@
+# TODO roadmap: TODO.md (task IDs below match the central checklist).
+# TODO [F0.1]: Record a reproducible dependency/environment snapshot and add dependencies only when the next milestone needs them.
+# TODO [M4A.1]: Choose and record the neat-python version; replace neat.cfg with a complete loadable configuration.
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "f1-neuroevolution"
+version = "0.1.0"
+description = "Headless F1-inspired racing simulation and NEAT driver evolution"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+# Install only when the relevant milestone needs these packages.
+[project.optional-dependencies]
+simulation = ["numpy>=1.26,<3", "shapely>=2,<3", "gymnasium", "PyYAML"]
+tracks = ["numpy>=1.26,<3", "shapely>=2,<3", "fastf1>=3.8,<4", "scipy"]
+training = ["neat-python"]
+rendering = ["pygame"]
+analysis = ["matplotlib"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

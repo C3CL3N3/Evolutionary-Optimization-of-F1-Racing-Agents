@@ -1,0 +1,18 @@
+# TODO roadmap: TODO.md (task IDs below match the central checklist).
+# TODO [F0.5]: Keep generated telemetry, caches, checkpoints, metrics, and replays ignored; retain small processed tracks and provenance deliberately.
+
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.DS_Store
+.ipynb_checkpoints/
+.cache/
+data/fastf1_cache/
+data/tracks/raw/*
+!data/tracks/raw/.gitkeep
+outputs/*/*
+!outputs/*/.gitkeep

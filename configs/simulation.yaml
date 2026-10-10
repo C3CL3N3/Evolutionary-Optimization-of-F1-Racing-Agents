@@ -1,0 +1,21 @@
+# TODO roadmap: TODO.md (task IDs below match the central checklist).
+# TODO [F0.3]: Complete the simulation schema with documented units, defaults, and loader-compatible field names.
+# TODO [M3A.3]: Validate an integral number of physics steps per controller update (initially five).
+# TODO [M3A.7]: Add explicit state/observation normalization scales and clipping bounds.
+# TODO [M3B.6]: Add calibrated episode/time/step limits, wrong-way tolerance, stall window, and minimum plausible lap time.
+# TODO [M3B.7]: Add configurable progress-reward and terminal-penalty coefficients.
+# TODO [M4B.7]: Store explicit fitness-stage coefficients and the empirically chosen transition rule.
+
+# Template: validate these settings when implementing RacingEnv.
+seed: 42
+physics_dt_s: 0.01
+control_dt_s: 0.05
+observation_count: 16
+action_count: 3
+ray_angles_deg: [-90, -67.5, -45, -22.5, 0, 22.5, 45, 67.5, 90]
+ray_range_m: 150.0
+lookahead_distances_m: [30.0, 100.0]
+track_width_m: 12.0
+collision_rule: full_footprint
+ers_strategy: rule_based
+# Episode limits and fitness coefficients require baseline calibration.

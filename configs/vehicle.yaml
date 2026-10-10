@@ -1,0 +1,33 @@
+# TODO roadmap: TODO.md (task IDs below match the central checklist).
+# TODO [M2A.3]: Keep SI fields aligned with VehicleConfig and document dimension/axle validation constraints.
+# TODO [M2A.4]: Document valid ranges for efficiencies, friction, steering, power, force, and ERS capacity.
+# TODO [M2A.5]: Add fixed baseline brake/aero allocation, low-speed threshold, and rule-based ERS envelope settings.
+# TODO [M2D.7]: Record calibrated baseline values and their assumptions after physics validation.
+
+# Initial F1-inspired modelling assumptions; not official FIA specifications.
+# Template schema: implement and validate VehicleConfig before loading this file.
+mass_kg: 760.0
+length_m: 5.2
+width_m: 1.9
+wheelbase_m: 3.4
+cg_to_front_axle_m: 1.55
+cg_to_rear_axle_m: 1.85
+cg_height_m: 0.3
+yaw_inertia_kg_m2: 1150.0
+longitudinal_friction: 1.7
+lateral_friction: 1.8
+front_cornering_stiffness_n_per_rad: 90000.0
+rear_cornering_stiffness_n_per_rad: 100000.0
+drag_area_m2: 1.0
+downforce_area_m2: 4.5
+air_density_kg_per_m3: 1.225
+steering_limit_rad: 0.35
+steering_rate_limit_rad_per_s: 0.8
+ice_max_power_w: 400000.0
+ers_max_power_w: 350000.0
+drivetrain_efficiency: 0.92
+ers_capacity_j: 4000000.0
+drive_force_cap_n: 12000.0
+regen_max_power_w: 150000.0
+regen_force_cap_n: 4000.0
+regen_efficiency: 0.7

@@ -1,0 +1,15 @@
+# TODO roadmap: TODO.md (task IDs below match the central checklist).
+# TODO [F0.3]: Resolve referenced config/track paths against a documented project root and validate the experiment schema.
+# TODO [M3C.4]: Add fixed baseline-driver tuning values after the baseline is implemented.
+# TODO [M4C.3]: Add run/output, fitness, training-budget, and exact source/config provenance settings.
+# TODO [M5A.1]: Specify identical vehicle, start conditions, and evaluation budgets for driver comparisons.
+# TODO [M5A.3]: Add independent training seeds and a recorded evaluation seed/repetition set.
+
+# Experiment template; processed geometry exists, training settings are pending.
+name: monza
+seed: 42
+track_path: data/tracks/processed/monza.json
+vehicle_config: configs/vehicle.yaml
+simulation_config: configs/simulation.yaml
+neat_config: configs/neat.cfg
+# Record the actual source session/lap metadata during offline preprocessing.
